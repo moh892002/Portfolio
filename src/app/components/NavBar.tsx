@@ -24,7 +24,7 @@ export default function NavBar() {
     >
       <div className="max-w-6xl mx-auto px-6 md:px-10 flex items-center justify-between h-16">
         <span
-          className="font-mono text-sm tracking-widest text-foreground uppercase cursor-pointer"
+          className="font-mono tracking-widest text-foreground uppercase cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="Scroll to top"
         >
