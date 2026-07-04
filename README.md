@@ -11,29 +11,26 @@ The original design was created in Figma and converted to code.
 | Framework         | [React 18](https://react.dev) + [TypeScript](https://www.typescriptlang.org/) |
 | Build Tool        | [Vite 6](https://vite.dev)                       |
 | Styling           | [Tailwind CSS 4](https://tailwindcss.com)         |
-| UI Components     | [shadcn/ui](https://ui.shadcn.com) + [Radix UI](https://www.radix-ui.com/) primitives |
-| Icons             | [Lucide React](https://lucide.dev) + [MUI Icons](https://mui.com/material-ui/material-icons/) |
-| Animation         | [Motion](https://motion.dev) (Framer Motion)      |
-| Charts            | [Recharts](https://recharts.org)                  |
-| Misc              | react-router, react-hook-form, sonner, vaul, react-day-picker, cmdk, recharts, canvas-confetti, embla-carousel, next-themes |
+| Animation         | [tw-animate-css](https://github.com/tw-in-js/tw-animate-css) |
+| Icons             | [Lucide React](https://lucide.dev)                |
 
 ## Getting Started
 
 ### Prerequisites
 
 - **Node.js** 18+ (LTS recommended)
-- **pnpm** (or npm / yarn)
+- **npm** (or pnpm / yarn)
 
 ### Install dependencies
 
 ```bash
-pnpm install
+npm install
 ```
 
 ### Start the development server
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 Opens at [http://localhost:5173](http://localhost:5173) by default.
@@ -41,7 +38,7 @@ Opens at [http://localhost:5173](http://localhost:5173) by default.
 ### Build for production
 
 ```bash
-pnpm build
+npm run build
 ```
 
 Output is in the `dist/` directory.
@@ -53,19 +50,27 @@ src/
 ├── app/
 │   ├── App.tsx              # Main application component (all sections)
 │   ├── port.png             # Profile photo
+│   ├── data/
+│   │   └── portfolio.ts     # Portfolio data (projects, skills, experience, contact)
+│   ├── hooks/
+│   │   ├── useScrollSpy.ts  # IntersectionObserver-based active section tracking
+│   │   ├── useParallax.ts   # Scroll-driven parallax transformation
+│   │   └── useInView.ts     # Element visibility detection with one-shot animation
 │   └── components/
-│       ├── figma/
-│       │   └── ImageWithFallback.tsx
-│       └── ui/              # shadcn/ui generated components
-│           ├── button.tsx, card.tsx, dialog.tsx, ...
-│           └── ...
+│       ├── NavBar.tsx       # Sticky navigation with scroll spy
+│       ├── Hero.tsx         # Hero section with parallax and profile photo
+│       ├── WorkSection.tsx  # Featured + regular project listings
+│       ├── AboutSection.tsx # Bio, stats, and experience timeline
+│       ├── SkillsSection.tsx# Grouped skill badges
+│       ├── ContactSection.tsx# Contact links with icons
+│       ├── Footer.tsx       # Copyright and branding
+│       └── AnimatedSection.tsx# Scroll-triggered animation wrapper
 ├── main.tsx                 # React entry point
 └── styles/
-    ├── index.css
-    ├── tailwind.css
-    ├── fonts.css
-    ├── theme.css
-    └── globals.css
+    ├── index.css            # Entry point composing all styles
+    ├── tailwind.css         # Tailwind CSS v4 setup with source scanning
+    ├── fonts.css            # Font-face declarations
+    └── theme.css            # CSS custom properties (theme tokens)
 ```
 
 ## Features
