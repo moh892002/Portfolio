@@ -59,8 +59,12 @@ export const SKILLS: SkillGroup[] = [
     items: ["JavaScript", "React.js", "Tailwind CSS", "HTML/CSS"],
   },
   {
-    group: "Databases & Tools",
-    items: ["PostgreSQL", "MongoDB", "Docker", "Git"],
+    group: "Databases",
+    items: ["PostgreSQL", "MongoDB"],
+  },
+  {
+    group: "Tools",
+    items: ["Redis", "Docker", "Git"],
   },
 ];
 

@@ -44,7 +44,7 @@ export default function AboutSection() {
           </p>
           <div className="pt-4 grid grid-cols-3 gap-6">
             {[
-              ["3+", "Projects"],
+              ["7+", "Projects"],
               ["Laravel", "Primary"],
               ["Full-Stack", "Skills"],
             ].map(([num, label]) => (
