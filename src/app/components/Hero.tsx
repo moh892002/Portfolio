@@ -5,7 +5,7 @@ import {
   Mail,
   ChevronDown,
 } from "lucide-react";
-import portfolio from "../port.png";
+import portfolio from "../port.jpg";
 import AnimatedSection from "./AnimatedSection";
 import { useParallax } from "../hooks/useParallax";
 
